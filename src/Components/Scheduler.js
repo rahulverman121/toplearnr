@@ -30,7 +30,7 @@ function Scheduler() {
             shours -= 12;
             phase = "PM"
         }
-        if (shours == 0) {
+        if (shours === 0) {
             shours = 12;
         }  
         var etime = new Date(datn.endTime * 1000) ;
@@ -40,7 +40,7 @@ function Scheduler() {
             ehours -= 12;
             ephase = "PM"
         }
-        if (ehours == 0) {
+        if (ehours === 0) {
             ehours = 12;
         }   
         
