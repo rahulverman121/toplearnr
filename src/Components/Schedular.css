@@ -1,0 +1,35 @@
+#schedular {
+    
+    width : 100% ;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+}
+#slottable {
+    margin : 7% 14%;
+
+}
+table {
+    border-collapse: collapse ;
+}
+tr {
+    height : 2.2rem ;
+}
+tr:nth-child(even) {
+    background-color: rgb(239, 234, 227);
+}
+td {
+    text-align: center;
+}
+.Accepted {
+    text-shadow: 0 0 0.5rem green;
+}
+.Accepted::after {
+    content: "+";
+}
+.Rejected {
+    text-shadow: 0 0 0.5rem red;
+}
+.Rejected::after {
+    content: "-";
+}
