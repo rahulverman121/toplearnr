@@ -20,7 +20,7 @@ function Scheduler() {
         return 1;
     } );
     newdata.sort(function(a,b) {
-        return b.startTime - a.startTime;
+        return a.startTime - b.startTime;
     });
 
     var tabledata = newdata.map( datn => {
