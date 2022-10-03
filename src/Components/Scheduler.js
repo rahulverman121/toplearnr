@@ -17,6 +17,7 @@ function Scheduler() {
     if (status === "Accepted") {
         timeslots.push([dat.startTime,dat.endTime]);
     }
+        return 1;
     } );
     newdata.sort(function(a,b) {
         return b.startTime - a.startTime;
