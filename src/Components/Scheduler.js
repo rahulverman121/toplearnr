@@ -26,6 +26,7 @@ function Scheduler() {
     var tabledata = newdata.map( datn => {
         var stime = new Date(datn.startTime * 1000) ;
         var shours = stime.getHours();
+        var smins = stime.getMinutes();
         var phase = "AM";
         if (shours > 11) {
             shours -= 12;
@@ -33,7 +34,10 @@ function Scheduler() {
         }
         if (shours === 0) {
             shours = 12;
-        }  
+        } 
+        if (smins%10 === smins) {
+            smins = '0'+smins;
+        }
         var etime = new Date(datn.endTime * 1000) ;
         var ehours = etime.getHours();
         var ephase = "AM";
@@ -49,7 +53,7 @@ function Scheduler() {
             <tr>
                 <td>{datn.name}</td>
                 <td>{datn.phone}</td>
-                <td>{shours+":"+stime.getMinutes()+phase}</td>
+                <td>{shours+":"+smins+phase}</td>
                 <td>{ehours+":"+etime.getMinutes()+ephase}</td>
                 <td class={datn.status}>{datn.status}</td>
             </tr>
